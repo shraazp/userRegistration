@@ -6,23 +6,22 @@ package com.user.registration;
  */
 public class UserRegistrationValidation {
 	/**
-	 * function to check if user's first name is proper or not 
-	 * @param firstname first name given by user
-	 * @return true if first name follows rules or else false
+	 * function to check if user's first name or last name is proper or not 
+	 * @param firstname first name or last name given by user
+	 * @return true if first name or last name follows rules or else false
 	 */
-	public Boolean firstNameValidate(String firstname)
+	public Boolean nameValidate(String name)
 	{
-		if(!Character.isUpperCase(firstname.charAt(0)))
+		if(!Character.isUpperCase(name.charAt(0)))
 		{
 			
 			return false;
 		}
-		else if(firstname.length()<3)
+		else if(name.length()<3)
 		{
 			return false;
 		}
 		else
 			return true;
 	}
-	
 }
