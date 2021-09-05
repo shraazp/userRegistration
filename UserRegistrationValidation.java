@@ -24,6 +24,11 @@ public class UserRegistrationValidation {
 		else
 			return true;
 	}
+	/**
+	 * function to check if email is valid or not
+	 * @param email entered by user
+	 * @return true or false
+	 */
 	public Boolean emailValidate(String email)
 	{
 		if(email==null)
@@ -33,6 +38,23 @@ public class UserRegistrationValidation {
 			String regex = "^(.+)@(.+)\\.(.+)$";
 			Pattern pattern = Pattern.compile(regex);
 			return pattern.matcher(email).matches();
+		}
+			
+	}
+	/**
+	 * function to check if mobile number is proper or not
+	 * @param mobile entered by user
+	 * @return true or false
+	 */
+	public Boolean mobileValidate(String mobile)
+	{
+		if(mobile==null)
+			return false;
+		else
+		{
+			String regex = "91 [1-9][0-9]{9}";
+			Pattern pattern = Pattern.compile(regex);
+			return pattern.matcher(mobile).matches();
 		}
 			
 	}
