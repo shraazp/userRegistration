@@ -63,6 +63,8 @@ public class UserRegistrationValidation {
 	{
 		if(password.length()<8)
 			return false;
+		else if(password.equals(password.toLowerCase()))
+			return false;
 		return true;
 	}
 }
