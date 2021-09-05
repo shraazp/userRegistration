@@ -65,6 +65,12 @@ public class UserRegistrationValidation {
 			return false;
 		else if(password.equals(password.toLowerCase()))
 			return false;
-		return true;
+		else 
+		{
+			String regex = ".*\\d.*";
+			Pattern pattern = Pattern.compile(regex);
+			return pattern.matcher(password).matches();
+		}
+		
 	}
 }
