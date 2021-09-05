@@ -58,4 +58,11 @@ public class UserRegistrationValidation {
 		}
 			
 	}
+	
+	public Boolean passwordValidate(String password)
+	{
+		if(password.length()<8)
+			return false;
+		return true;
+	}
 }
