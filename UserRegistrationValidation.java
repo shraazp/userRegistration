@@ -58,19 +58,15 @@ public class UserRegistrationValidation {
 		}
 			
 	}
-	
+	/**
+	 * function to check for password validation
+	 * @param password password given by user
+	 * @return true or false
+	 */
 	public Boolean passwordValidate(String password)
 	{
-		if(password.length()<8)
-			return false;
-		else if(password.equals(password.toLowerCase()))
-			return false;
-		else 
-		{
-			String regex = ".*\\d.*";
+			String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
 			Pattern pattern = Pattern.compile(regex);
-			return pattern.matcher(password).matches();
-		}
-		
+			return pattern.matcher(password).matches();	
 	}
 }
