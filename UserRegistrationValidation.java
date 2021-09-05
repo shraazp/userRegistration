@@ -1,4 +1,5 @@
 package com.user.registration;
+import java.util.regex.*;
 /**
  * A class containing user  information 
  * @author Shravya P
@@ -14,7 +15,6 @@ public class UserRegistrationValidation {
 	{
 		if(!Character.isUpperCase(name.charAt(0)))
 		{
-			
 			return false;
 		}
 		else if(name.length()<3)
@@ -23,5 +23,17 @@ public class UserRegistrationValidation {
 		}
 		else
 			return true;
+	}
+	public Boolean emailValidate(String email)
+	{
+		if(email==null)
+			return false;
+		else
+		{
+			String regex = "^(.+)@(.+)\\.(.+)$";
+			Pattern pattern = Pattern.compile(regex);
+			return pattern.matcher(email).matches();
+		}
+			
 	}
 }
