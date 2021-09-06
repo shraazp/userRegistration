@@ -12,9 +12,9 @@ public class UserRegistrationValidation {
 	 */
 	public Boolean firstNameValidate(String firstname)
 	{
-		String regex="^[A-Z][A-Za-z0-9]{3,}";
+		String regex="^[A-Z][A-Za-z0-9]{2,}";
 		Pattern pattern = Pattern.compile(regex);
-		return pattern.matcher(name).matches();
+		return pattern.matcher(firstname).matches();
 	}
 	
 }
