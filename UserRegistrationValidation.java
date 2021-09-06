@@ -12,16 +12,8 @@ public class UserRegistrationValidation {
 	 */
 	public Boolean nameValidate(String name)
 	{
-		if(!Character.isUpperCase(name.charAt(0)))
-		{
-			
-			return false;
-		}
-		else if(name.length()<3)
-		{
-			return false;
-		}
-		else
-			return true;
+		String regex="^[A-Z][A-Za-z0-9]{3,}";
+		Pattern pattern = Pattern.compile(regex);
+		return pattern.matcher(name).matches();
 	}
 }
