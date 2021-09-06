@@ -25,14 +25,10 @@ public class UserRegistrationValidation {
 	 */
 	public Boolean emailValidate(String email)
 	{
-		if(email==null)
-			return false;
-		else
-		{
 			String regex = "^[a-zA-Z0-9-_+]+(\\.?[a-zA-Z0-9-_]+)@[a-zA-Z0-9-_]+\\.[a-zA-Z]{2,}+\\.?[a-zA-Z-_]*";
 			Pattern pattern = Pattern.compile(regex);
 			return pattern.matcher(email).matches();
-		}
+		
 			
 	}
 	/**
@@ -42,14 +38,11 @@ public class UserRegistrationValidation {
 	 */
 	public Boolean mobileValidate(String mobile)
 	{
-		if(mobile==null)
-			return false;
-		else
-		{
+		
 			String regex = "91 [1-9][0-9]{9}";
 			Pattern pattern = Pattern.compile(regex);
 			return pattern.matcher(mobile).matches();
-		}
+		
 			
 	}
 	/**
