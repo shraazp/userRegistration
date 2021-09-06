@@ -52,7 +52,7 @@ public class UserRegistrationValidation {
 	 */
 	public Boolean passwordValidate(String password)
 	{
-			String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
+			String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$";
 			Pattern pattern = Pattern.compile(regex);
 			return pattern.matcher(password).matches();	
 	}
