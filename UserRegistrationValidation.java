@@ -13,7 +13,7 @@ public class UserRegistrationValidation {
 	 */
 	public Boolean nameValidate(String name)
 	{
-		String regex="^[A-Z][A-Za-z0-9]{3,}";
+		String regex="^[A-Z][A-Za-z0-9]{2,}";
 		Pattern pattern = Pattern.compile(regex);
 		return pattern.matcher(name).matches();
 		
